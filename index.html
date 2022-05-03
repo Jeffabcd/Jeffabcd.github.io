@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Fang's personal website</title>
+        <link rel="icon" type="image/x-icon" href="icon1.jpg">
+    </head>
+    <body>
+        <style>
+            a:hover {color:red}
+        </style>
+        <audio loop autoplay  >
+             
+        </audio>
+        <iframe src='Bgm.mp3' allow='autoplay' style='display:none' id='iframeAudio'> </iframe>
+        <script>
+            function Update()
+            {
+                var dt=new Date();
+                document.getElementById("datetime").innerHTML = document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (("0" + dt.getDate()).slice(-2)) + "-" + (dt.getFullYear()) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2)) + ":" + (("0" + dt.getSeconds()).slice(-2));
+            }
+            setInterval("Update()",1000)
+        </script>
+        <h1>方世昕的個人網頁</h1>
+
+       
+        <p id="datetime"></p>
+        
+        <p>
+            <img src="photo.jpg" height="200",weight="200" />
+            <br/>
+            畢業高中: 
+            <a href="https://www.hs.ntnu.edu.tw/">師大附中</a>
+            <br/>
+            就讀科系: 
+            <a href="https://web.ee.ntu.edu.tw/">台大電機系</a>
+            
+        </p>
+        <hr/>
+        <p>
+            興趣嗜好:
+            <ul>
+                <li><a href="https://zh.wikipedia.org/wiki/%E7%9D%A1%E7%9C%A0">睡覺</a></li>
+                <li><a href="https://zh.wikipedia.org/wiki/%E7%BE%BD%E6%AF%9B%E7%90%83">打羽球</a></li>
+                <li><a href="https://zh.wikipedia.org/wiki/%E9%9F%B3%E4%B9%90">聽音樂</a></li>
+            </ul>
+        </p>
+        
+    </body>
+</html>
