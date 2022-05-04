@@ -3,21 +3,27 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Fang's personal website</title>
-        <link rel="icon" type="image/x-icon" href="icon1.jpg">
+        <link rel="icon" type="image/x-icon" href="myicon.ico">
     </head>
     <body>
         <style>
             a:hover {color:red}
         </style>
-        <audio loop autoplay  >
-             
+        <audio controls loop autoplay  >
+            <source src="Bgm.mp3" type="audio/mp3">
         </audio>
-        <iframe src='Bgm.mp3' allow='autoplay' style='display:none' id='iframeAudio'> </iframe>
+      
         <script>
             function Update()
             {
                 var dt=new Date();
-                document.getElementById("datetime").innerHTML = document.getElementById("datetime").innerHTML = (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (("0" + dt.getDate()).slice(-2)) + "-" + (dt.getFullYear()) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2)) + ":" + (("0" + dt.getSeconds()).slice(-2));
+                var m=("0"+(dt.getMonth()+1)).slice(-2)
+                var d=("0"+dt.getDate()).slice(-2)
+                var y=(dt.getFullYear())
+                var h=(("0" + dt.getHours()).slice(-2))
+                var ms=("0" + dt.getMinutes()).slice(-2)
+                var s=("0" + dt.getSeconds()).slice(-2) 
+                document.getElementById("datetime").innerHTML = document.getElementById("datetime").innerHTML = m + "-" + d + "-" + y + " " + h + ":" + ms + ":" + s;
             }
             setInterval("Update()",1000)
         </script>
